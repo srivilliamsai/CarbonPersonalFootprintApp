@@ -31,3 +31,42 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Node.js ###
+node_modules/
+npm-debug.log
+yarn-error.log
+node-v*
+*.tar.gz
+
+### OS ###
+.DS_Store
+Thumbs.db
+
+### Documentation ###
+PPT_Content.md
+AI_Prompts_for_Slides.md
+PPT_Slides/
+
+### Frontend ###
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/build/
+frontend/coverage/
+
+
+### Logs ###
+*.log
+backend.log
+logs/
+
+### Miscellaneous ###
+bin/
+.history/
+.sass-cache/
+*.class
+
+### Database ###
+setup_db.sql

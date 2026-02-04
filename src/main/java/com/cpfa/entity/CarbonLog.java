@@ -30,18 +30,32 @@ public class CarbonLog {
 	@Column(name = "date")
 	private LocalDate date;
 
-	@Column(name = "t-emission", length = 100)
+	@Column(name = "transport_mode", length = 50)
+	private String transportMode;
+
+	@Column(name = "diet_type", length = 50)
+	private String dietType;
+
+	@Column(name = "t_emission", length = 100)
 	private double transportEmission;
 
-	@Column(name = "f-emission", length = 100)
+	@Column(name = "f_emission", length = 100)
 	private double foodEmission;
 
-	@Column(name = "e-emission", length = 100)
+	@Column(name = "e_emission", length = 100)
 	private double energyEmission;
 
-	@Column(name = "total-emission", length = 100)
+	@Column(name = "total_emission", length = 100)
 	private double totalEmission;
-	
+
+	public double getTotalEmission() {
+		return totalEmission;
+	}
+
+	public void setTotalEmission(double totalEmission) {
+		this.totalEmission = totalEmission;
+	}
+
 	@ManyToOne
 	private User user;
 

@@ -11,6 +11,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import java.time.LocalDateTime;
+import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
 @Table(name = "survey")
@@ -33,6 +35,13 @@ public class Survey {
 
 	@Column(name = "eusage")
 	private double energyUsage;
+
+	@Column(name = "frequency", columnDefinition = "json")
+	private String frequency;
+
+	@CreationTimestamp
+	@Column(name = "created_at", updatable = false)
+	private LocalDateTime createdAt;
 
 	// Establish Foreign Key (JPA Mapping)
 	@ManyToOne
