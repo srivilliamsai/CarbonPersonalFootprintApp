@@ -91,7 +91,7 @@ CarbonPersonalFootprintApp/
 │   │   ├── Marketplace.jsx # Redemption Store
 │   │   ├── components/     # Reusable UI atoms
 │   │   └── footer/         # Static Pages
-└── setup_db.sql         # Database Initialization
+
 ```
 
 ## 🤝 Contributing
