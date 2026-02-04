@@ -12,9 +12,12 @@ const FeaturesPage = ({ onNavigate }) => {
                         onClick={() => onNavigate('landing')}
                         className="text-xl font-bold tracking-tight flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
                     >
-                        <img src={`${import.meta.env.BASE_URL}logo-dark.png`} alt="Logo" className="h-8 w-8 object-contain hidden dark:block" />
-                        <img src={`${import.meta.env.BASE_URL}logo-light.png`} alt="Logo" className="h-8 w-8 object-contain block dark:hidden" />
-                        <span className="relative z-10">Carbon Personal Footprint</span>
+                        <img src={`${import.meta.env.BASE_URL}logo-dark.png`} alt="Logo" className="h-10 w-10 object-contain hidden dark:block" />
+                        <img src={`${import.meta.env.BASE_URL}logo-light.png`} alt="Logo" className="h-10 w-10 object-contain block dark:hidden" />
+                        <div className="flex flex-col leading-none">
+                            <span className="text-xl font-bold">Carbon</span>
+                            <span className="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">Personal Footprint</span>
+                        </div>
                     </div>
                     <div className="hidden md:block font-bold text-xl tracking-tight text-gray-500">Features</div>
                     <div className="w-24"></div> {/* Spacer for centering */}
@@ -53,7 +56,7 @@ const FeaturesPage = ({ onNavigate }) => {
                     </div>
                     <div className="flex-1 order-1 md:order-2 bg-gray-50 dark:bg-carbon-gray border border-gray-200 dark:border-white/10 rounded-3xl h-[400px] w-full flex items-center justify-center relative overflow-hidden group shadow-xl dark:shadow-none transition-colors duration-300">
                         <img
-                            src="/images/intelligent-tracking.png"
+                            src={`${import.meta.env.BASE_URL}images/intelligent-tracking.png`}
                             alt="Intelligent Tracking Map"
                             className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                         />
@@ -65,7 +68,7 @@ const FeaturesPage = ({ onNavigate }) => {
                 <div className="flex flex-col md:flex-row items-center gap-16 mb-32">
                     <div className="flex-1 bg-gray-50 dark:bg-carbon-gray border border-gray-200 dark:border-white/10 rounded-3xl h-[400px] w-full flex items-center justify-center relative overflow-hidden group shadow-xl dark:shadow-none transition-colors duration-300">
                         <img
-                            src="/images/diet-insights.png"
+                            src={`${import.meta.env.BASE_URL}images/diet-insights.png`}
                             alt="Dietary Insights Dashboard"
                             className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                         />

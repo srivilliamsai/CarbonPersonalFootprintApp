@@ -10,9 +10,12 @@ const Security = ({ onNavigate }) => {
                         onClick={() => onNavigate('landing')}
                         className="text-xl font-bold tracking-tight flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
                     >
-                        <img src={`${import.meta.env.BASE_URL}logo-dark.png`} alt="Logo" className="h-8 w-8 object-contain hidden dark:block" />
-                        <img src={`${import.meta.env.BASE_URL}logo-light.png`} alt="Logo" className="h-8 w-8 object-contain block dark:hidden" />
-                        <span className="relative z-10">Carbon Personal Footprint</span>
+                        <img src={`${import.meta.env.BASE_URL}logo-dark.png`} alt="Logo" className="h-10 w-10 object-contain hidden dark:block" />
+                        <img src={`${import.meta.env.BASE_URL}logo-light.png`} alt="Logo" className="h-10 w-10 object-contain block dark:hidden" />
+                        <div className="flex flex-col leading-none">
+                            <span className="text-xl font-bold">Carbon</span>
+                            <span className="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">Personal Footprint</span>
+                        </div>
                     </div>
                     <div className="hidden md:block font-bold text-xl tracking-tight text-gray-500">Security</div>
                     <div className="w-24"></div>
