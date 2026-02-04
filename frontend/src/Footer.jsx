@@ -33,7 +33,7 @@ const Footer = ({ onNavigate }) => {
                     <div className="flex items-center gap-3 mb-6">
                         <img src={`${import.meta.env.BASE_URL}logo-dark.png`} alt="Carbon Footprint Logo" className="h-8 w-8 object-contain hidden dark:block" />
                         <img src={`${import.meta.env.BASE_URL}logo-light.png`} alt="Carbon Footprint Logo" className="h-8 w-8 object-contain block dark:hidden" />
-                        <div className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Carbon Footprint</div>
+                        <div className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Carbon Personal Footprint</div>
                     </div>
                     <p className="leading-relaxed">
                         Empowering individuals to take control of their environmental impact through data and design.

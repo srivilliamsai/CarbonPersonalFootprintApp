@@ -10,8 +10,9 @@ const Terms = ({ onNavigate }) => {
                         onClick={() => onNavigate('landing')}
                         className="text-xl font-bold tracking-tight flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
                     >
-                        <div className="w-8 h-8 bg-carbon-green rounded-full blur-[2px] opacity-80"></div>
-                        <span className="relative z-10">Carbon</span>
+                        <img src={`${import.meta.env.BASE_URL}logo-dark.png`} alt="Logo" className="h-8 w-8 object-contain hidden dark:block" />
+                        <img src={`${import.meta.env.BASE_URL}logo-light.png`} alt="Logo" className="h-8 w-8 object-contain block dark:hidden" />
+                        <span className="relative z-10">Carbon Personal Footprint</span>
                     </div>
                     <div className="hidden md:block font-bold text-xl tracking-tight text-gray-500">Terms of Service</div>
                     <div className="w-24"></div>
