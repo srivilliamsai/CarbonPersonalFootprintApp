@@ -53,7 +53,7 @@ const FeaturesPage = ({ onNavigate }) => {
                     </div>
                     <div className="flex-1 order-1 md:order-2 bg-gray-50 dark:bg-carbon-gray border border-gray-200 dark:border-white/10 rounded-3xl h-[400px] w-full flex items-center justify-center relative overflow-hidden group shadow-xl dark:shadow-none transition-colors duration-300">
                         <img
-                            src="/images/intelligent-tracking.png"
+                            src={`${import.meta.env.BASE_URL}images/intelligent-tracking.png`}
                             alt="Intelligent Tracking Map"
                             className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                         />
@@ -65,7 +65,7 @@ const FeaturesPage = ({ onNavigate }) => {
                 <div className="flex flex-col md:flex-row items-center gap-16 mb-32">
                     <div className="flex-1 bg-gray-50 dark:bg-carbon-gray border border-gray-200 dark:border-white/10 rounded-3xl h-[400px] w-full flex items-center justify-center relative overflow-hidden group shadow-xl dark:shadow-none transition-colors duration-300">
                         <img
-                            src="/images/diet-insights.png"
+                            src={`${import.meta.env.BASE_URL}images/diet-insights.png`}
                             alt="Dietary Insights Dashboard"
                             className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                         />
