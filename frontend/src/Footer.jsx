@@ -31,8 +31,8 @@ const Footer = ({ onNavigate }) => {
             <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 mb-20 text-gray-600 dark:text-gray-400">
                 <div className="col-span-2 md:col-span-1">
                     <div className="flex items-center gap-3 mb-6">
-                        <img src="/logo-dark.png" alt="Carbon Footprint Logo" className="h-8 w-8 object-contain hidden dark:block" />
-                        <img src="/logo-light.png" alt="Carbon Footprint Logo" className="h-8 w-8 object-contain block dark:hidden" />
+                        <img src={`${import.meta.env.BASE_URL}logo-dark.png`} alt="Carbon Footprint Logo" className="h-8 w-8 object-contain hidden dark:block" />
+                        <img src={`${import.meta.env.BASE_URL}logo-light.png`} alt="Carbon Footprint Logo" className="h-8 w-8 object-contain block dark:hidden" />
                         <div className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Carbon Footprint</div>
                     </div>
                     <p className="leading-relaxed">

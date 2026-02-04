@@ -233,8 +233,8 @@ const LandingPage = ({ onGetStarted, onNavigate, initialScrollSection }) => {
             <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-carbon-dark/80 backdrop-blur-xl border-b border-gray-200 dark:border-white/5 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
                     <div className="text-xl font-bold tracking-tight flex items-center gap-3">
-                        <img src="/logo-dark.png" alt="Carbon Footprint Logo" className="h-10 w-10 object-contain hidden dark:block scale-110" />
-                        <img src="/logo-light.png" alt="Carbon Footprint Logo" className="h-10 w-10 object-contain block dark:hidden scale-110" />
+                        <img src={`${import.meta.env.BASE_URL}logo-dark.png`} alt="Carbon Footprint Logo" className="h-10 w-10 object-contain hidden dark:block scale-110" />
+                        <img src={`${import.meta.env.BASE_URL}logo-light.png`} alt="Carbon Footprint Logo" className="h-10 w-10 object-contain block dark:hidden scale-110" />
                         <span className="relative z-10">Carbon Footprint</span>
                     </div>
                     <div className="flex items-center gap-8">
