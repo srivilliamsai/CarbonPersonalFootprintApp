@@ -177,7 +177,7 @@ const Blog = ({ onNavigate }) => {
                 </div>
             </nav>
 
-            <div className="pt-48 md:pt-32 pb-20 px-6 max-w-7xl mx-auto">
+            <div className="pt-24 md:pt-32 pb-20 px-6 max-w-7xl mx-auto">
 
                 {/* Featured Post */}
                 <div className="relative rounded-[3rem] overflow-hidden bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-white/10 mb-20 group cursor-pointer shadow-2xl dark:shadow-none transition-colors duration-300">
