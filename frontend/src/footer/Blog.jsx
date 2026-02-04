@@ -177,7 +177,7 @@ const Blog = ({ onNavigate }) => {
                 </div>
             </nav>
 
-            <div className="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+            <div className="pt-40 md:pt-32 pb-20 px-6 max-w-7xl mx-auto">
 
                 {/* Featured Post */}
                 <div className="relative rounded-[3rem] overflow-hidden bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-white/10 mb-20 group cursor-pointer shadow-2xl dark:shadow-none transition-colors duration-300">
@@ -187,16 +187,16 @@ const Blog = ({ onNavigate }) => {
                         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
                     </div>
 
-                    <div className="absolute bottom-0 left-0 p-10 md:p-20 z-20 max-w-3xl">
+                    <div className="absolute bottom-0 left-0 p-8 md:p-20 z-20 max-w-3xl">
                         <span className="text-carbon-green font-bold uppercase tracking-wider mb-4 block">Featured Story</span>
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight group-hover:underline decoration-carbon-green underline-offset-8">
                             The hidden carbon cost of cloud computing (and how we solve it).
                         </h1>
                         <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-gray-700 rounded-full"></div>
+                            <img src={`${import.meta.env.BASE_URL}images/sri-avatar.jpg`} alt="Sri Villiam Sai" className="w-14 h-14 rounded-full object-cover border-2 border-white/20 shadow-lg" />
                             <div>
-                                <div className="font-bold">Sri Villiam Sai</div>
-                                <div className="text-sm text-gray-400">Editor in Chief • Feb 2, 2026</div>
+                                <div className="font-bold text-lg">Sri Villiam Sai</div>
+                                <div className="text-sm text-gray-300">Editor in Chief • Feb 2, 2026</div>
                             </div>
                         </div>
                     </div>
