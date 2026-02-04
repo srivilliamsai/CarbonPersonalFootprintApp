@@ -183,7 +183,7 @@ const Blog = ({ onNavigate }) => {
                 <div className="relative rounded-[3rem] overflow-hidden bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-white/10 mb-20 group cursor-pointer shadow-2xl dark:shadow-none transition-colors duration-300">
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-100 via-gray-100/50 to-transparent dark:from-black dark:via-black/50 dark:to-transparent z-10 transition-colors duration-300"></div>
                     {/* Hero Background using CSS Mesh Gradient */}
-                    <div className="h-[500px] w-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-green-900 via-gray-900 to-black opacity-80 group-hover:scale-105 transition-transform duration-700">
+                    <div className="h-[400px] md:h-[500px] w-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-green-900 via-gray-900 to-black opacity-80 group-hover:scale-105 transition-transform duration-700">
                         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
                     </div>
 
