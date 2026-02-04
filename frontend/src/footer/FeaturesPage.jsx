@@ -26,7 +26,7 @@ const FeaturesPage = ({ onNavigate }) => {
                 {/* Hero */}
                 <div className="text-center mb-32">
                     <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-900 dark:text-white tracking-tighter transition-colors duration-300">
-                        Powerful tools for a <br />
+                        Powerful tools for a <br className="hidden md:block" />
                         <span className="text-carbon-green">greener future.</span>
                     </h1>
                     <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed transition-colors duration-300">
