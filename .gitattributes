@@ -1,2 +1,5 @@
-/mvnw text eol=lf
-*.cmd text eol=crlf
+# Mark package-lock as generated so it doesn't count towards language stats
+frontend/package-lock.json linguist-generated=true
+
+# Mark Javascript assets as vendored if you want to exclude them (Uncomment to hide JS)
+# frontend/** linguist-vendored=true
