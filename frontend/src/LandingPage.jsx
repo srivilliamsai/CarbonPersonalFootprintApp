@@ -235,14 +235,17 @@ const LandingPage = ({ onGetStarted, onNavigate, initialScrollSection }) => {
                     <div className="text-xl font-bold tracking-tight flex items-center gap-3">
                         <img src={`${import.meta.env.BASE_URL}logo-dark.png`} alt="Carbon Footprint Logo" className="h-10 w-10 object-contain hidden dark:block scale-110" />
                         <img src={`${import.meta.env.BASE_URL}logo-light.png`} alt="Carbon Footprint Logo" className="h-10 w-10 object-contain block dark:hidden scale-110" />
-                        <span className="relative z-10">Carbon Personal Footprint</span>
+                        <span className="relative z-10 flex flex-col items-start md:flex-row md:items-center md:gap-1 leading-none md:leading-normal">
+                            <span>Carbon</span>
+                            <span>Personal Footprint</span>
+                        </span>
                     </div>
                     <div className="flex items-center gap-8">
                         <a href="#features" className="hidden md:block text-sm text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">Features</a>
                         <a href="#impact" className="hidden md:block text-sm text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">Impact</a>
                         <button
                             onClick={onGetStarted}
-                            className="text-sm font-medium bg-white/10 px-5 py-2 rounded-full hover:bg-white/20 transition-all"
+                            className="text-sm font-medium bg-white/10 px-4 md:px-5 py-2 rounded-full hover:bg-white/20 transition-all whitespace-nowrap"
                         >
                             Sign In
                         </button>

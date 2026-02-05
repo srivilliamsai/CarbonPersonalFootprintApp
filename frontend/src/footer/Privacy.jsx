@@ -12,10 +12,12 @@ const Privacy = ({ onNavigate }) => {
                     >
                         <img src={`${import.meta.env.BASE_URL}logo-dark.png`} alt="Logo" className="h-8 w-8 object-contain hidden dark:block" />
                         <img src={`${import.meta.env.BASE_URL}logo-light.png`} alt="Logo" className="h-8 w-8 object-contain block dark:hidden" />
-                        <span className="relative z-10">Carbon Personal Footprint</span>
+                        <span className="relative z-10 flex flex-col items-start md:flex-row md:items-center md:gap-1 leading-none md:leading-normal">
+                            <span>Carbon</span>
+                            <span>Personal Footprint</span>
+                        </span>
                     </div>
-                    <div className="hidden md:block font-bold text-xl tracking-tight text-gray-500">Privacy Policy</div>
-                    <div className="w-24"></div>
+                    <div className="font-bold text-sm md:text-xl tracking-tight text-gray-500">Privacy Policy</div>
                 </div>
             </nav>
 
