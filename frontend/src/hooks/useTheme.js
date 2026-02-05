@@ -1,18 +1,24 @@
 import { useState, useEffect } from 'react';
 
 export const useTheme = () => {
-    const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState(() => {
+        if (typeof window !== 'undefined') {
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                return 'dark';
+            }
+            return 'light';
+        }
+        return 'dark'; // Fallback
+    });
 
     useEffect(() => {
-        // Initial Theme Check and Synchronization
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            setTheme('dark');
+        // Class Synchronization
+        if (theme === 'dark') {
             document.documentElement.classList.add('dark');
         } else {
-            setTheme('light');
             document.documentElement.classList.remove('dark');
         }
-    }, []);
+    }, [theme]);
 
     // Dynamic Meta Tag Update
     useEffect(() => {
