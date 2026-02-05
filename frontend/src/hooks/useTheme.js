@@ -12,11 +12,13 @@ export const useTheme = () => {
     });
 
     useEffect(() => {
-        // Class Synchronization
+        // Class and Style Synchronization
         if (theme === 'dark') {
             document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
         } else {
             document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
         }
     }, [theme]);
 
@@ -38,10 +40,12 @@ export const useTheme = () => {
             setTheme('light');
             localStorage.theme = 'light';
             document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
         } else {
             setTheme('dark');
             localStorage.theme = 'dark';
             document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
         }
     };
 
