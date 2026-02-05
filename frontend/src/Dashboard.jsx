@@ -226,22 +226,9 @@ const Dashboard = ({ user, onLogout, onNavigate }) => {
     };
 
     // Theme Toggle Logic
-    const [isDarkMode, setIsDarkMode] = useState(true);
 
-    useEffect(() => {
-        // Enforce dark mode by default
-        setIsDarkMode(true);
-        document.documentElement.classList.add('dark');
-    }, []);
 
-    const toggleTheme = () => {
-        setIsDarkMode(!isDarkMode);
-        if (isDarkMode) {
-            document.documentElement.classList.remove('dark');
-        } else {
-            document.documentElement.classList.add('dark');
-        }
-    };
+
 
     // Global Emissions Counter Logic
     const [globalEmissions, setGlobalEmissions] = useState(0);

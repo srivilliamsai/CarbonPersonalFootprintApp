@@ -1,43 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useTheme } from '../hooks/useTheme';
 
 const Footer = ({ onNavigate }) => {
-    const [theme, setTheme] = useState('dark');
-
-    useEffect(() => {
-        // Initial Theme Check
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            setTheme('dark');
-            document.documentElement.classList.add('dark');
-        } else {
-            setTheme('light');
-            document.documentElement.classList.remove('dark');
-        }
-    }, []);
-
-    // Dynamic Meta Tag Update
-    useEffect(() => {
-        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-        if (themeColorMeta) {
-            themeColorMeta.setAttribute('content', theme === 'dark' ? '#000000' : '#ffffff');
-        }
-
-        const appleStatusMeta = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
-        if (appleStatusMeta) {
-            appleStatusMeta.setAttribute('content', theme === 'dark' ? 'black-translucent' : 'default');
-        }
-    }, [theme]);
-
-    const toggleTheme = () => {
-        if (theme === 'dark') {
-            setTheme('light');
-            localStorage.theme = 'light';
-            document.documentElement.classList.remove('dark');
-        } else {
-            setTheme('dark');
-            localStorage.theme = 'dark';
-            document.documentElement.classList.add('dark');
-        }
-    };
+    const { theme, toggleTheme } = useTheme();
 
     return (
         <footer id="footer" className="border-t border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-carbon-gray/30 pt-20 pb-10 px-6 transition-colors duration-300">
