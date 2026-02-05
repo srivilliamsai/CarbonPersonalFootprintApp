@@ -24,17 +24,30 @@ export const ThemeProvider = ({ children }) => {
         }
     }, [theme]);
 
-    // Dynamic Meta Tag Update
+    // Dynamic Meta Tag Update - Remove and re-add for Safari compatibility
     useEffect(() => {
-        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-        if (themeColorMeta) {
-            themeColorMeta.setAttribute('content', theme === 'dark' ? '#000000' : '#ffffff');
-        }
+        const newColor = theme === 'dark' ? '#000000' : '#ffffff';
+        const newStatusStyle = theme === 'dark' ? 'black' : 'default';
 
-        const appleStatusMeta = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
-        if (appleStatusMeta) {
-            appleStatusMeta.setAttribute('content', theme === 'dark' ? 'black' : 'default');
+        // Remove existing theme-color meta tag and add a new one
+        let themeColorMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeColorMeta) {
+            themeColorMeta.remove();
         }
+        themeColorMeta = document.createElement('meta');
+        themeColorMeta.name = 'theme-color';
+        themeColorMeta.content = newColor;
+        document.head.appendChild(themeColorMeta);
+
+        // Remove existing apple-mobile-web-app-status-bar-style and add a new one
+        let appleStatusMeta = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+        if (appleStatusMeta) {
+            appleStatusMeta.remove();
+        }
+        appleStatusMeta = document.createElement('meta');
+        appleStatusMeta.name = 'apple-mobile-web-app-status-bar-style';
+        appleStatusMeta.content = newStatusStyle;
+        document.head.appendChild(appleStatusMeta);
     }, [theme]);
 
     const toggleTheme = () => {

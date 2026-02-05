@@ -18,8 +18,20 @@
       var isDark = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
       if (isDark) {
         document.documentElement.classList.add('dark');
-        document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000000');
-        document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute('content', 'black');
+        // Remove and re-add meta tags for Safari compatibility
+        var oldThemeMeta = document.querySelector('meta[name="theme-color"]');
+        if (oldThemeMeta) oldThemeMeta.remove();
+        var newThemeMeta = document.createElement('meta');
+        newThemeMeta.name = 'theme-color';
+        newThemeMeta.content = '#000000';
+        document.head.appendChild(newThemeMeta);
+
+        var oldStatusMeta = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+        if (oldStatusMeta) oldStatusMeta.remove();
+        var newStatusMeta = document.createElement('meta');
+        newStatusMeta.name = 'apple-mobile-web-app-status-bar-style';
+        newStatusMeta.content = 'black';
+        document.head.appendChild(newStatusMeta);
       }
     })();
   </script>
