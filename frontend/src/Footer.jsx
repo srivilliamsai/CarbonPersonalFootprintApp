@@ -4,7 +4,7 @@ const Footer = ({ onNavigate }) => {
     const [theme, setTheme] = useState('dark');
 
     useEffect(() => {
-        // Check local storage or system preference
+        // Initial Theme Check
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             setTheme('dark');
             document.documentElement.classList.add('dark');
@@ -13,6 +13,19 @@ const Footer = ({ onNavigate }) => {
             document.documentElement.classList.remove('dark');
         }
     }, []);
+
+    // Dynamic Meta Tag Update
+    useEffect(() => {
+        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeColorMeta) {
+            themeColorMeta.setAttribute('content', theme === 'dark' ? '#000000' : '#ffffff');
+        }
+
+        const appleStatusMeta = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+        if (appleStatusMeta) {
+            appleStatusMeta.setAttribute('content', theme === 'dark' ? 'black-translucent' : 'default');
+        }
+    }, [theme]);
 
     const toggleTheme = () => {
         if (theme === 'dark') {
