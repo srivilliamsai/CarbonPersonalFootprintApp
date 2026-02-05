@@ -31,7 +31,7 @@ export const useTheme = () => {
 
         const appleStatusMeta = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
         if (appleStatusMeta) {
-            appleStatusMeta.setAttribute('content', theme === 'dark' ? 'black-translucent' : 'default');
+            appleStatusMeta.setAttribute('content', theme === 'dark' ? 'black' : 'default');
         }
     }, [theme]);
 
