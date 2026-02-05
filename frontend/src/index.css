@@ -9,16 +9,14 @@
 body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
-}
-
-/* Global Theme Transition */
-*,
-*::before,
-*::after {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, box-shadow;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 }
+
+/* Global Theme Transition */
+/* Global Theme Transition - Removed for performance preference */
+/* Relying on explicit Tailwind classes instead */
 
 /* Custom Scrollbar for cleaner look */
 ::-webkit-scrollbar {
