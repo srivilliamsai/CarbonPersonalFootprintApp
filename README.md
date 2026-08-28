@@ -1,8 +1,8 @@
-# 🌿 Carbon Personal Footprint Application
+#  Carbon Personal Footprint Application
 
 A comprehensive full-stack web application designed to help users maximize their environmental impact through tracking, education, and gamification. Built as part of the Infosys Internship program.
 
-## 🚀 Technology Stack
+##  Technology Stack
 
 ### Frontend
 - **React.js**: Component-based UI architecture.
@@ -19,7 +19,7 @@ A comprehensive full-stack web application designed to help users maximize their
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 ### � Dashboard & Analytics
 - **Daily Logging**: Track footprints across Diet, Transport, and Energy categories.
@@ -35,13 +35,13 @@ A comprehensive full-stack web application designed to help users maximize their
 - **Eco-Credits**: Earn currency by logging everyday and maintaining streaks.
 - **Real Impact**: Redeem credits for planting trees or funding renewable energy projects.
 
-### 🧠 Educational Hub
+###  Educational Hub
 - **Smart Insights**: AI-driven tips tailored to reducing your specific emission spikes.
 - **Resources**: In-app articles and guides on sustainable living strategies.
 
 ---
 
-## 🛠️ Installation & Setup
+## ️ Installation & Setup
 
 ### Prerequisites
 - **Java 17** (JDK)
@@ -74,7 +74,7 @@ The React app will launch at `http://localhost:5173`.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 CarbonPersonalFootprintApp/
@@ -86,7 +86,7 @@ CarbonPersonalFootprintApp/
 │   ├── entity/          # Data Models
 │   └── config/          # JWT & Security Setup
 ├── frontend/            # React Frontend
-│   ├── src/             
+│   ├── src/
 │   │   ├── Dashboard.jsx   # Core Analytics
 │   │   ├── Marketplace.jsx # Redemption Store
 │   │   ├── components/     # Reusable UI atoms
@@ -94,7 +94,7 @@ CarbonPersonalFootprintApp/
 
 ```
 
-## 🤝 Contributing
+##  Contributing
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
